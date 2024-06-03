@@ -4,6 +4,13 @@ module.exports = {
     SHOPIFY_STOREFRONT_ACCESSTOKEN: process.env.SHOPIFY_STOREFRONT_ACCESSTOKEN
   },
   images: {
-    domains: ['cdn.shopify.com']
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.shopify.com',
+        pathname: '**',
+      }
+    ],
+    // domains: ['cdn.shopify.com']
   }
 }
